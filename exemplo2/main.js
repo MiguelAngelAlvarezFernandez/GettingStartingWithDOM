@@ -13,5 +13,5 @@ function changeImageSrc(event) {
     bigImage.src = clickedInput.value
 }
 
-inputs[0].addEventListener("input", changeImageSrc)
-inputs[1].addEventListener("input", changeImageSrc)
+inputs[0].addEventListener("click", changeImageSrc)
+inputs[1].addEventListener("click", changeImageSrc)
