@@ -11,11 +11,11 @@ function incrementaOContador() {
 botonDoContador.addEventListener("click", incrementaOContador)
 
 /**
- * As liñas 4 a 7 crean una función con nome incrementaOContador.
- * As instruccións almacenadas nesa función (liñas 4 e 5)
- * non se executarán despois da liña 2 nin da 4, senon que
- * quedarán postargadas ó momento en que empreguemos esa función,
- * empregando o seu nome, nalgún momento no futuro.
+ * As liñas 4 a 9 crean una función con nome incrementaOContador.
+ * As instruccións almacenadas nesa función (liñas 5 e 8)
+ * non se executarán secuencialmente despois das liñas 1 ó 4,
+ * senon que quedarán postargadas ó momento en que empreguemos
+ * esa función, empregando o seu nome, nalgún momento no futuro.
  * 
  * A liña 9 establece que cando se produza un click no obxecto 
  * do DOM HTML almacenado na variable botonDoContador (almacénase
