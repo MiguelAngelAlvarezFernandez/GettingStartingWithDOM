@@ -1,17 +1,12 @@
-const inputs = document.querySelectorAll("input")
-const bigImage = document.querySelector("img.bigPicture")
+const botonsTipoRadio = document.querySelectorAll("input[type='radio']")
+const imaxeGrande = document.querySelector("img.imaxeGrandota")
 
-function changeImageSrc(event) {
-    /**
-     * Na seguinte liña, target é o elemento HTML no que
-     * se produxo o evento que disparou esta función.
-     * Para o noso caso, os elementos que poderán disparar
-     * a función serán calquera dos dous radio buttons (mira
-     * as liñas 16 e 17).
-     */
-    const clickedInput = event.target
-    bigImage.src = clickedInput.value
+function cambiarOrixeDaImaxeGrandota(event) {
+    let obxetoDOMOrixinarioDoEvento = event.target
+    let novaOrixeDaImaxe = obxetoDOMOrixinarioDoEvento.value // Valor do obxeto orixe do evento
+    imaxeGrande.src = novaOrixeDaImaxe
 }
 
-inputs[0].addEventListener("click", changeImageSrc)
-inputs[1].addEventListener("click", changeImageSrc)
+// botonsTipoRadio é "algo" parecido a un array. [0] e [1] refiren o primeiro e segundo elemento deste "array".
+botonsTipoRadio[0].addEventListener("click", cambiarOrixeDaImaxeGrandota)
+botonsTipoRadio[1].addEventListener("click", cambiarOrixeDaImaxeGrandota)

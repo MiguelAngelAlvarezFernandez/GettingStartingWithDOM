@@ -1,19 +1,23 @@
-const sillyButton = document.querySelector("button")
-const paragraph = document.querySelector("p")
+const botonDoContador = document.querySelector("button")
+const paragrafoDoContador = document.querySelector("p")
 
-/**
- * As seguintes liñas crean una función con nome sillyCount.
- * Cando esta función sexa invocada no futuro executará
- * as instruccións almacenadas no bloque entre os signos {}.
- */
-function sillyCount() {
-    paragraph.innerText += "Ouch!... "
+function incrementaOContador() {
+    // parseInt: intenta convertir un string nun número sen decimais
+    const numeroEnContador = parseInt(paragrafoDoContador.innerText)
+    const contadorIncrementado = numeroEnContador + 1
+    paragrafoDoContador.innerText = contadorIncrementado
 }
 
+botonDoContador.addEventListener("click", incrementaOContador)
+
 /**
- * A seguinte liña establece un "onclick" no elemento 
- * HTML almacenado na variable sillyButton.
- * Consegue que cando se faga click no botón, se poña en
- * marcha a funcion "sillyCount".
+ * As liñas 4 a 7 crean una función con nome incrementaOContador.
+ * As instruccións almacenadas nesa función (liñas 4 e 5)
+ * non se executarán despois da liña 2 nin da 4, senon que
+ * quedarán postargadas ó momento en que empreguemos esa función,
+ * empregando o seu nome, nalgún momento no futuro.
+ * 
+ * A liña 9 establece que cando se produza un click no obxecto 
+ * do DOM HTML almacenado na variable botonDoContador (almacénase
+ * na liña 1) se poña en marcha a funcion "incrementaOContador".
  */
-sillyButton.addEventListener("click", sillyCount)
