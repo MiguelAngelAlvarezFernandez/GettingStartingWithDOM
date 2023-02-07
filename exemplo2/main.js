@@ -2,6 +2,7 @@ const botonsTipoRadio = document.querySelectorAll("input[type='radio']")
 const imaxeGrande = document.querySelector("img.imaxeGrandota")
 
 function cambiarOrixeDaImaxeGrandota(event) {
+//Nota May: El event de arriba hace referencia al evento CLICK que activa la función
     let obxetoDOMOrixinarioDoEvento = event.target
     let novaOrixeDaImaxe = obxetoDOMOrixinarioDoEvento.value // Valor do obxeto orixe do evento
     imaxeGrande.src = novaOrixeDaImaxe
